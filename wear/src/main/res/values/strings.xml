@@ -1,3 +1,11 @@
+<!--
+  ~ ok-android-testing
+  ~ https://github.com/dherges/ok-android-testing
+  ~
+  ~ Copyright (c) 2016 David Herges
+  ~ Licensed under the MIT license.
+  -->
+
 <resources>
     <string name="app_name">Testing</string>
     <string name="hello_world">Hello World!</string>

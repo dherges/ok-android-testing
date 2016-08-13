@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ ok-android-testing
+  ~ https://github.com/dherges/ok-android-testing
+  ~
+  ~ Copyright (c) 2016 David Herges
+  ~ Licensed under the MIT license.
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ok.android.testing">
 

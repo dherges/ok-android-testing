@@ -1,5 +1,13 @@
+<!--
+  ~ ok-android-testing
+  ~ https://github.com/dherges/ok-android-testing
+  ~
+  ~ Copyright (c) 2016 David Herges
+  ~ Licensed under the MIT license.
+  -->
+
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
 </resources>
