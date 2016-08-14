@@ -8,7 +8,6 @@
 
 package ok.android.testing.auth;
 
-
 import java.io.IOException;
 
 public class UserAuthentication {
