@@ -29,6 +29,7 @@ public class AuthenticationApiTest {
     assertThat(mockApi()).isNotNull();
   }
 
+  @Test
   public void login_200Ok() throws Exception {
     mockWebServer.enqueue(new MockResponse().setResponseCode(200));
 
