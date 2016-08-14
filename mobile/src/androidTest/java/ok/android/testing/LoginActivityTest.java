@@ -8,7 +8,6 @@
 
 package ok.android.testing;
 
-
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -16,6 +15,7 @@ import android.test.suitebuilder.annotation.LargeTest;
 import com.orhanobut.mockwebserverplus.MockWebServerPlus;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,15 +35,17 @@ public class LoginActivityTest {
   private String mStringToBetyped;
 
   @Rule
-  public ActivityTestRule<LoginActivity> mActivityRule = new ActivityTestRule<>(LoginActivity.class);
+  public MockWebServerPlus mockWebServerPlus = new MockWebServerPlus();
 
   @Rule
-  public MockWebServerPlus mockWebServerPlus = new MockWebServerPlus();
+  public ActivityTestRule<LoginActivity> mActivityRule = new ActivityTestRule<>(LoginActivity.class);
 
   @Before
   public void initValidString() {
     // Specify a valid string.
     mStringToBetyped = "Espresso";
+
+    TestingApplication.AUTH_BASE_URL = mockWebServerPlus.url("/");
   }
 
   @Test
@@ -54,7 +56,7 @@ public class LoginActivityTest {
     onView(withId(R.id.password))
       .perform(typeText(mStringToBetyped), closeSoftKeyboard());
 
-    onView(withId(R.id.email_sign_in_button)).perform(click());
+    onView(withId(R.id.sign_in_button)).perform(click());
 
     // Check that the text was changed.
     onView(withId(R.id.email))
