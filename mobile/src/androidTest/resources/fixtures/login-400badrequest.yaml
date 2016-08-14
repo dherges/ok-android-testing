@@ -1,0 +1,5 @@
+statusCode: 400
+body: >
+    {
+      "msg": "Du kommst hier nicht rein"
+    }
